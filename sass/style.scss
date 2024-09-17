@@ -1,0 +1,18 @@
+@import "_base";
+@import "_sharedClasses";
+@import "_newItemEntry";
+@import "_listContainer";
+
+/*
+    
+Sass partials are smaller Sass files that you can use to break up your CSS into smaller, more manageable chunks. A partial is created by naming a Sass file with an underscore at the beginning, such as _partial.scss. This indicates to Sass that the file is a partial and that it should not be compiled into a CSS file on its own.
+
+To use a partial in your main Sass file, you import it without the underscore and file extension. For example, if you have a partial named "_variables.scss", you would import it like this:
+
+    @import 'variables';
+
+
+The reason I am importing those files in this file is that each file has its own codes and I want them to be in this file as this file is gonna compiled into css file!!!
+
+
+*/

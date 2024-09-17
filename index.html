@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonts File -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>To Do List</title>
+    <!-- The " type='module' " is because of the modules -->
+    <script src="js/main.js" type="module"></script>
+
+</head>
+<body>
+    
+    <main>
+        <section class="newItemEntry">
+            <form action="" id="itemEntryForm">
+                <label for="newItem">Enter a new to do item</label>
+                <input type="text" id="newItem" size="40" autocomplete="off" placeholder="Add Item" tabindex="0">
+                <button id="addItem" class="button" title="Add New Item" aria-label="Add new item to list" tabindex="0">+</button>
+                <!-- "aria-label" is used to give more meaning to the elements, in our case, like a button as it is showing us a plus symbol which is not descriptive -->
+            </form>
+        </section>
+
+        <section class="listContainer">
+
+            <div class="listTitle">
+                <h1 tabindex="0">To Do List</h1>
+                <button id="clearItems" class="button" title="Clear the list" aria-label="Remove all items from the list" tabindex="0">Clear</button>
+            </div>
+
+            <hr>
+            
+            <div id="listItems">
+                <div class="item">
+                    <input type="checkbox" id="1" tabindex="0">
+                    <label for="1">eat</label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox" id="2" tabindex="0">
+                    <label for="2">sleep</label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox" id="3" tabindex="0">
+                    <label for="3">read</label>
+                </div>
+            </div>
+
+            <p id="confirmation" class="confirmation" aria-live="assertive"></p>
+
+        </section>
+    </main>
+    <!-- 
+
+        The "for" attribute is used in labels. It refers to the "id" of the element this label is associated with.
+
+        For example:
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" />
+
+        Now when the user clicks with the mouse on the "username text" the browser will automatically put the focus in the corresponding input field. This also works with other input elements such as <textbox> and <select>.
+
+
+        The aria-label
+        Fields without visual labels still needs a label. If you can not use a <label>, one option is to use a "aria-label". 
+
+     -->
+
+</body>
+</html>

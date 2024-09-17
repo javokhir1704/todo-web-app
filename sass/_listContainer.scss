@@ -1,0 +1,65 @@
+
+.listContainer {
+    min-height: 60vh; // kind of 60% whatever the viewport height is
+    padding: 0.75rem;
+
+    .listTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        button {
+            font-size: 1rem;
+            background-color: $clear-button-color;
+            padding: 0 0.1rem;
+            margin-bottom: 0.5rem;
+    
+            @include mq(768px) {
+                padding: 0 0.5rem;
+            }
+        }
+    }
+
+
+    hr {
+        width: 100%;
+    }
+
+    #listItems {
+    
+        .item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 1rem;
+        
+            input[type="checkbox"] {
+                text-align: center;
+    
+                width: 2.5rem; // to specify the exact dimension of an element
+                min-width: 48px; // element can't shrink below 48px in width
+                height: 2.5rem; // to specify the fixed size relative to the root "fs"
+                min-height: 48px; // element can't shrink below 48px in height
+    
+                cursor: pointer;
+                margin-right: 1.5rem;
+            }
+    
+            input[type="checkbox"]:focus + label {// this style is because when we tab through, let's say using the keyboard or selecting the item by mouse, this item will have a focus, we want to underline those "to-do-items" which are specifically the labels
+                text-decoration: underline;
+            }
+    
+            label {
+                font-size: 1.1rem;
+            }
+        }
+    
+    }
+
+    .confirmation {
+        position: absolute;
+        left: -10000px;
+    }
+    
+}
+

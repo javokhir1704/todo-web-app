@@ -1,0 +1,26 @@
+.button {
+    width: 15%;
+    min-width: 48px;//retains minimum dimensions for usability, preventing it from becoming too small.
+    min-height: 48px;
+
+    color: $button-textcolor;
+    border:2px solid $textbook-bordercolor;
+    border-radius: 10px;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+        filter: brightness(120%);
+        box-shadow: 4px 2px 5px #000;  
+    }
+}
+
+// .button:hover,
+// .button:focus {
+//     filter: brightness(120%);
+//     box-shadow: 4px 2px 5px #000;
+// }

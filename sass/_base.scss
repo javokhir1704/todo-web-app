@@ -1,0 +1,56 @@
+$default-font-color:#000;
+$background-color:#4a90e2;
+$container-bgcolor:#f2f2f2;
+$container-bordercolor:#000;
+
+$textbook-bordercolor:lightgray;
+
+$button-textcolor:#fff;
+
+$add-button-color: #4caf50;
+$clear-button-color:#9f6060;
+
+// The "(min-width: $size)" part means that the styles will only apply if the viewport width is at least "$size".
+@mixin mq($size) {
+    @media only screen and (min-width:$size) {
+        @content;
+    }
+}
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; // 'sans-serif' is a backup font family in case where the 'Montserrat' fails to load
+    color:$default-font-color;
+    width: 100%;
+    min-height: 100%;
+
+    @include mq(768px) { // ipad's size
+        //Bigger font size when the webpage is more than 768px
+        font-size: 22px;
+    }
+}
+
+
+body {
+    padding: 20px;
+    background-color:$background-color;
+}
+
+
+section {
+    background-color: $container-bgcolor;
+    width: 90%;
+    max-width: 700px; // when we get to a larger screen, we don't want it growing beyond "700px". This prevents the element from becoming too wide on large screens.
+    margin: auto;
+    border:1px solid $container-bordercolor;
+
+    border-radius: 10px;
+}
